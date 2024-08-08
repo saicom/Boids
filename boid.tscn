@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://df0gsfv5b7q2b"]
+
+[ext_resource type="Script" path="res://boid.gd" id="1_ddgv4"]
+[ext_resource type="Texture2D" uid="uid://c3hajjqhxloc6" path="res://shapes.png" id="1_odoox"]
+
+[node name="Boid" type="Node2D"]
+script = ExtResource("1_ddgv4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.52549, 1, 1, 1)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_odoox")
+region_enabled = true
+region_rect = Rect2(260, 15, 120, 98)

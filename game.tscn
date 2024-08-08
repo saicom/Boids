@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxl7gj1kgbhlk"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_likvu"]
+[ext_resource type="PackedScene" uid="uid://c4d8qwddgwj1t" path="res://obstacle.tscn" id="2_5ecgf"]
+
+[sub_resource type="Environment" id="Environment_cwkfv"]
+background_mode = 3
+glow_enabled = true
+glow_strength = 1.37
+glow_blend_mode = 1
+glow_hdr_threshold = 0.9
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_likvu")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_cwkfv")
+
+[node name="Obstacle" parent="." instance=ExtResource("2_5ecgf")]
+position = Vector2(379, 260)
+
+[node name="Obstacle2" parent="." instance=ExtResource("2_5ecgf")]
+position = Vector2(810, 617)
+
+[node name="Obstacle3" parent="." instance=ExtResource("2_5ecgf")]
+position = Vector2(1205, 273)
